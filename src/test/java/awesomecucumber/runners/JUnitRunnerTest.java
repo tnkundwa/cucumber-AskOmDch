@@ -9,7 +9,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/Login.feature",
+        features = "src/test/resources/features/FilterByPrice.feature",
         glue = {"awesomecucumber.stepdef",
                 "awesomecucumber.hooks",
                 "awesomecucumber.customtypes",
