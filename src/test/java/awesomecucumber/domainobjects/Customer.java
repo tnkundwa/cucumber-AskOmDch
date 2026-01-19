@@ -1,13 +1,24 @@
 package awesomecucumber.domainobjects;
 
 public class Customer {
-    private String username;
+    private String Username;
+    private String email;
     private String password;
 
-    public Customer(String username, String password) {
-        this.username = username;
+    public Customer(String username, String email, String password) {
+        this.Username = username;
+        this.email = email;
         this.password = password;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
 
     public String getPassword() {
         return password;
@@ -19,10 +30,10 @@ public class Customer {
 
 
     public String getUsername() {
-        return username;
+        return Username;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.Username = username;
     }
 }

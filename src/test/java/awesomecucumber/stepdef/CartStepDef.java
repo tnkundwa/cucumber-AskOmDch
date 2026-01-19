@@ -6,7 +6,7 @@ import awesomecucumber.pages.CartPage;
 import awesomecucumber.pages.PageFactoryManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.testng.Assert;
+import org.junit.Assert;
 
 public class CartStepDef {
     private final CartPage cartPage;

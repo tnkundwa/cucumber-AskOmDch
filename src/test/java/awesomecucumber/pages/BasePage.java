@@ -1,5 +1,6 @@
 package awesomecucumber.pages;
 
+import awesomecucumber.constants.EndPoint;
 import awesomecucumber.utils.ConfigLoader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -20,4 +21,9 @@ public class BasePage {
     public void load(String endPoint) {
         driver.get(ConfigLoader.getInstance().getBaseUrl() + endPoint);
     }
+    
+    public void loadCategory(String categorySlug) {
+        load(EndPoint.PRODUCT_CATEGORY.url + "/" + categorySlug);
+    }
+
 }

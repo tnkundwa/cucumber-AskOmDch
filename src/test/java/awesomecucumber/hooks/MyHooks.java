@@ -20,12 +20,10 @@ public class MyHooks {
     public void setUp(Scenario scenario) {
         driver = DriverFactory.initializeDriver("chrome");
         context.driver = driver;
-        System.out.println("Before, Thread ID: " + Thread.currentThread().getId() + " Thread name: " + Thread.currentThread().getName() + " Scenario name: " + scenario.getName());
     }
 
     @After
     public void tearDown(Scenario scenario) {
         driver.quit();
-        System.out.println("After, Thread ID: " + Thread.currentThread().getId() + " Thread name: " + Thread.currentThread().getName() + " Scenario name: " + scenario.getName());
     }
 }
