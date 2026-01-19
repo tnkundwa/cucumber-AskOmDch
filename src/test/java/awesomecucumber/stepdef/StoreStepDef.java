@@ -18,7 +18,6 @@ public class StoreStepDef {
 
     @Given("I'm on the Store Page")
     public void iMOnTheStorePage() {
-//        driver = DriverFactory.getDriver();
         new StorePage(driver).load(MyConstants.STORE);
     }
 

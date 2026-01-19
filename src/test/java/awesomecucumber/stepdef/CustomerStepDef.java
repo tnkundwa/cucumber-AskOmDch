@@ -24,7 +24,6 @@ public class CustomerStepDef {
 
     @Given("I'm a guest customer")
     public void iMAGuestCustomer() {
-//        driver = DriverFactory.getDriver();
         new StorePage(driver).load(EndPoint.STORE.url);
     }
 }

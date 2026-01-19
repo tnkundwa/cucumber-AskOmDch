@@ -69,14 +69,6 @@ public class CheckoutPage extends BasePage {
     }
 
     public CheckoutPage selectBillingState(String billingStateName) {
-//        alternateBillingStateDropDown.click();
-//        WebElement e = wait.until(ExpectedConditions.elementToBeClickable(
-//                By.xpath("//li[text()='" + billingStateName + "']")));
-//        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", e);
-//        assert null != e;
-//        e.click();
-
-//        Select select = new Select(wait.until(ExpectedConditions.visibilityOf(billingStateDropDown)));
         Select select = new Select(Objects.requireNonNull(wait.until(ExpectedConditions.visibilityOf(billingStateDropDown))));
         select.selectByVisibleText(billingStateName);
         return this;
@@ -94,17 +86,6 @@ public class CheckoutPage extends BasePage {
         return this;
     }
 
-    //    public CheckoutPage setBillingDetails(String billingFirstName, String billingLastName, String billingAddressOne,
-//                                          String billingCity, String billingStateName, String billingZip,
-//                                          String billingEmail) {
-//        return enterBillingFirstName(billingFirstName).
-//                enterBillingLastName(billingLastName).
-//                enterBillingAddressLineOne(billingAddressOne).
-//                enterBillingCity(billingCity).
-//                selectBillingState(billingStateName).
-//                enterBillingZip(billingZip).
-//                enterBillingEmail(billingEmail);
-//    }
     public CheckoutPage setBillingDetails(BillingDetails billingDetails) {
         return enterBillingFirstName(billingDetails.getBillingFirstName()).
                 enterBillingLastName(billingDetails.getBillingLastName()).
@@ -118,17 +99,10 @@ public class CheckoutPage extends BasePage {
     public CheckoutPage placeOrder() {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".blockUI.blockOverlay")));
         Objects.requireNonNull(wait.until(ExpectedConditions.elementToBeClickable(placeOrderBtn))).click();
-        /*
-        or you can also use js and get rid of the wait
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();",
-        driver.findElement(placeOrderBtn));
-         */
-
         return this;
     }
 
     public String getNotice() {
         return Objects.requireNonNull(wait.until(ExpectedConditions.visibilityOf(noticeTxt))).getText();
     }
-
 }

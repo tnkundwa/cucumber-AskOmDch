@@ -13,7 +13,7 @@ Feature: Add product to cart
         | product_name    |
         | Blue Shoes      |
         | Anchor Bracelet |
-#        | Blue Tshirt     |
+        | Blue Tshirt     |
 
 #    Scenario: Add one quantity from Store
 #      Given I'm on the Store Page
