@@ -5,5 +5,5 @@ Feature: Browsing By Category
     When I select an option from the dropdown of the browse by category section
       | browseOption |
       | men          |
-#      | Women's Shirts  (1) |
+      | women        |
     Then I should only see the items that match that category on the page

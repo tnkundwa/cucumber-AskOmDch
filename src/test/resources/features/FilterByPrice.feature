@@ -11,3 +11,4 @@ Feature: Filter by Price
     Examples:
       | slideRight | slideLeft |
       | 3          | 4         |
+      | 2          | 5         |
