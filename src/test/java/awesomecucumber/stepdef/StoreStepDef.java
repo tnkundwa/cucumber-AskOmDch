@@ -24,7 +24,7 @@ public class StoreStepDef {
 
     @Given("I'm on the Store Page")
     public void iMOnTheStorePage() {
-        new StorePage(driver).load(MyConstants.STORE);
+        new StorePage(driver).load(EndPoint.STORE.url);
     }
 
     @When("I add a {product} to the cart")
