@@ -1,6 +1,7 @@
 package awesomecucumber.stepdef;
 
 import awesomecucumber.constants.EndPoint;
+import awesomecucumber.constants.MyConstants;
 import awesomecucumber.context.TestContext;
 import awesomecucumber.domainobjects.BillingDetails;
 import awesomecucumber.pages.StorePage;
@@ -24,6 +25,6 @@ public class CustomerStepDef {
 
     @Given("I'm a guest customer")
     public void iMAGuestCustomer() {
-        new StorePage(driver).load(EndPoint.STORE.url);
+        new StorePage(driver).load(MyConstants.STORE);
     }
 }
